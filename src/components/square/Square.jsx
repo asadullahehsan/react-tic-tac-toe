@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import "./Square.css";
 
 export const Square = ({ value, onSquareClick }) => {

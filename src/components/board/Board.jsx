@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
+
 import { Square } from "../square/Square";
-import './Board.css'
+import "./Board.css";
 
 function calculateWinner(squares) {
   const lines = [
