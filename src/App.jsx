@@ -1,3 +1,5 @@
+/*eslint no-debugger: "error"*/
+
 import { useState } from "react";
 import { Board } from "./components/board/Board";
 
@@ -26,7 +28,11 @@ const Game = () => {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        {move === currentMove ? (
+          <p>You are at move #{move}</p>
+        ) : (
+          <button onClick={() => jumpTo(move)}>{description}</button>
+        )}
       </li>
     );
   });
