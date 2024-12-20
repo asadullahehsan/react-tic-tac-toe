@@ -56,7 +56,7 @@ export const Board = ({ xIsNext, squares, onPlay }) => {
         <div key={rowIndex} className="board-row">
           {[0, 1, 2].map((columnIndex) => (
             <Square
-              key={`${rowIndex}-${columnIndex}`}
+              key={`${rowIndex * 3 + columnIndex}`}
               value={squares[rowIndex * 3 + columnIndex]}
               onSquareClick={() => handleClick(rowIndex * 3 + columnIndex)}
             />
